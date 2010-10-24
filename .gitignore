@@ -2,7 +2,9 @@
 .DS_Store
 tmp
 log
-config/database.yml
+*.log
+Capfile
+config/deploy.rb
 vendor/rails
 db/*.sqlite
 db/*.sqlite2

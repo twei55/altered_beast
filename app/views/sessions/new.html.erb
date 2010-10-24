@@ -36,7 +36,7 @@
   <p><%= I18n.t 'txt.views_users.email_directions' %></p>
   <p><%= text_field_tag :email, "", :size => 30 %></p>
   <p><%= submit_tag I18n.t("txt.views_users.send_email", :default => "E-mail me the link") %>
-    or <%= link_to_function(I18n.t("txt.cancel", :default => "cancel"), "$('reset-password').hide()") %></p>
+  <%= I18n.t("txt.or", :default => "or") %> <%= link_to_function(I18n.t("txt.cancel", :default => "cancel"), "$('reset-password').hide()") %></p>
 
 <% end -%>
 

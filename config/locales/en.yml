@@ -137,4 +137,22 @@
       email_directions: Enter your email, and a brand new login key will be sent to you.  Click the link in the email to log in, and then change your password.
       reset_password: Reset password
       
-      
+    post_created: "Post was successfully created."
+    post_updated: "Post was successfully updated."
+    topic_created: "Topic was successfully created."
+    topic_updated: "Topic was successfully updated."
+    user_updated: "User account was successfully updated."
+    user_activated: "Signup complete!"
+    user_suspended: "User was suspended."
+    user_unsuspended: "User was unsuspended."
+    site_created: "Site was successfully created."
+    site_updated: "Site was successfully updated."
+    forum_created: "Forum was successfully created."
+    forum_updated: "Forum was successfully updated."
+    create_account: " Please create your account."
+    moderatorship_created: "Moderatorship was successfully created."
+    moderatorship_not_created: "Moderatorship could not be created: "
+    logged_out: "You have been logged out."
+    invalid_login: "Invalid login"
+    invalid_openid: "Sorry, no user by the identity URL exists"
+    successful_login: "Logged in successfully"

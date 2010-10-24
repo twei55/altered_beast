@@ -1,23 +1,56 @@
 <%= render :partial => "layouts/head" %>
+<%= render :partial => "gafa/header" %>
 
-<div id="container">
-<div id="content">
-  
-<%= content_tag 'p', h(flash[:notice]), :class => 'notice' if flash[:notice] %>
-<%= content_tag 'p', h(flash[:error]), :class => 'notice error' if flash[:error] %>
-
-<%= yield %>
+<!-- <div id="container">
+<div id="content"> -->
+<!-- Content Wrap -->
+<div id="content-overflow">
+	<div id="content-wrapper" class="container_16" style="height:1000px">
+		<div id="gafa-content" class="grid_16">
+			<div id="messages">
+				<%= content_tag 'p', h(flash[:notice]), :class => 'notice' if flash[:notice] %>
+				<%= content_tag 'p', h(flash[:error]), :class => 'notice error' if flash[:error] %>
+			</div>
+		<div id="forum-left" class="grid_11 alpha content-box large" style="padding:10px 30px">
+			<%= yield %>
+		</div>
+		<div id="right" class="grid_4 omega">
+		  <%= yield :right %>
+		</div>
+		</div>
+	</div>
+	<div class="sep">&#160;</div>
 </div>
-
-<div id="right">
-  <%= yield :right %>
+<!-- Footer Wrap -->
+<div id="footer-overflow">
+	<div id="gafa-footer" class="container_16">
+		<div class="grid_16">
+		<ul>
+			<li><a href="#">Impressum</a></li>
+			<li><a href="#">Nutzungshinweise</a></li>
+			<li><a href="#">Kontaktformular</a></li>
+		</ul>
+		</div>
+	</div>
 </div>
+<div class="clear"></div>
+<div id="footer-ending"></div>
+<script type="text/javascript" charset="utf-8">
+  document.observe("dom:loaded",function(event) {
+    var main_content_margins = 45;
+    $('content-wrapper').style.height = parseInt(document.height) + "px";
+  });
+</script>
 
-<br style="clear:both;" />
+<!-- <div id="right">
+  <%#= yield :right %>
+</div> -->
 
-</div>
+<!-- <br style="clear:both;" />
 
-<div id="footer">
+</div> -->
+
+<!-- <div id="footer">
   <p class="disclaim">
     <strong>
     <% if site = @current_site || Site.first %>
@@ -39,6 +72,6 @@
     <a href="http://weblog.techno-weenie.net" class="subtle">Rick Olson</a>
   </p>
   <br style="clear:both;" />
-</div>
+</div> -->
 </body>
 </html>

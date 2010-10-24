@@ -22,9 +22,10 @@
 
 <div>
   <label for="user_password"><%=  I18n.t 'txt.views_users.password_title', :default => 'Password' %></label><br />
-  <p class="entryhelp" style="margin-top:0.5em;"><%=  I18n.t 'txt.views_users.password_field', :default => 'Enter a new password twice to change your password. (must be longer than 5 characters)' %></p>
+  <p class="help" style="margin-top:0.5em;"><%=  I18n.t 'txt.views_users.password_field', :default => 'Enter a new password twice to change your password. (must be longer than 5 characters)' %></p>
   <%= settings.password_field :password, :size => 16 %>
-  <span class="entryhelp">(<%=  I18n.t 'txt.views_users.once', :default => 'once' %>)</span><br />
+  <span class="help">(<%=  I18n.t 'txt.views_users.once', :default => 'once' %>)</span><br />
   <%= settings.password_field :password_confirmation, :size => 16 %>
-  <span class="entryhelp">(<%=  I18n.t 'txt.views_users.and_again', :default => 'and again' %>)</span>
+  <span class="help">(<%=  I18n.t 'txt.views_users.and_again', :default => 'and again' %>)</span>
 </div>
+<p></p>

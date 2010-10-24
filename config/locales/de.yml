@@ -122,6 +122,7 @@
     views: aufgerufen
     search: Suche
     settings: Einstellungen
+    user_account: Mein Benutzerprofil
     signup: Registrieren
     login: Einloggen
     logout: Ausloggen
@@ -272,6 +273,11 @@
       website_title: Webseite
       without_http: "ohne HTTP:// Prefix"
       bio_title: "Über mich (öffentlich)"
+      
+      email_directions: "Gib bitte Deine Emailadresse an, damit wir Dir neue Login-Daten schicken können. Klicke auf den Link in der Email, um Dich einzuloggen und ändere anschließend das Passwort."
+      reset_password: "Passwort zurücksetzen"
+      send_email: "Neues Login anfordern"
+      
 
     views_forums:
       title: Name des Forums
@@ -309,3 +315,24 @@
       zero: Moderator
       one: Moderator
       other: Moderatoren
+      
+    post_created: Der Beitrag wurde erfolgreich angelegt.
+    post_updated: Der Beitrag wurde erfolgreich aktualisiert.
+    topic_created: Das Thema wurde erfolgreich angelegt.
+    topic_updated: Das Thema wurde erfolgreich aktualisiert.
+    user_updated: Das Benutzerprofil wurde erfolgreich aktualisiert.
+    user_activated: Der Benutzer wurde erfolgreich aktiviert.
+    user_suspended: Der Benutzer wurde gesperrt.
+    user_unsuspended: Der Benutzer wurde entsperrt.
+    site_created: Die Seite wurde erfolgreich angelegt.
+    site_updated: Die Seite wurde erfolgreich aktualisiert.
+    forum_created: Das Forum wurde erfolgreich angelegt.
+    forum_updated: Das Forum wurde erfolgreich aktualisiert.
+    create_account: " Bitte erstelle Dir einen Benutzeraccount."
+    moderatorship_created: "Die Moderation wurde erfolgreich angelegt."
+    moderatorship_not_created: "Die Moderation konnte nicht angelegt werden: "
+    logged_out: "Du hast Dich erfolgreich abgemeldet."
+    invalid_login: "Deine Login-Daten sind ungültig."
+    invalid_openid: "OpenID-Daten ungültig."
+    successful_login: "Du hast Dich erfolgreich angemeldet."
+    or_login_with_openid: "Log-in mit OpenID"

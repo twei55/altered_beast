@@ -5,7 +5,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :sites, :moderatorships, :monitorship
   
-
   map.resources :forums, :has_many => :posts do |forum|
     forum.resources :topics do |topic|
       topic.resources :posts

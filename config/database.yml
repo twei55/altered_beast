@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  database: gafa_forum_development
+  username: ramboll
+  password: ramlit
+  host: localhost
+  socket: /var/lib/mysql/mysql.sock
+  
+test:
+  adapter: mysql
+  database: gafa_forum_test
+  username: ramboll
+  password: ramlit
+  host: localhost
+  socket: /var/lib/mysql/mysql.sock
+  
+# Production Railshoster
+production:
+  adapter: mysql
+  database: gafa_forum
+  username: gafa
+  password: BFhUyE2tbGXQYvFG
+  host: localhost

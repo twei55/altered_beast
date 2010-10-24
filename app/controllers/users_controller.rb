@@ -48,7 +48,7 @@ class UsersController < ApplicationController
     @user = admin? ? find_user : current_user
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        flash[:notice] = 'User account was successfully updated.'
+        flash[:notice] = t('txt.flash_messages.user_updated')
         format.html { redirect_to(settings_path) }
         format.xml  { head :ok }
       else
@@ -63,20 +63,20 @@ class UsersController < ApplicationController
     self.current_user = params[:activation_code].blank? ? false : current_site.all_users.find_in_state(:first, :pending, :conditions => {:activation_code => params[:activation_code]})
     if logged_in?
       current_user.activate!
-      flash[:notice] = "Signup complete!"
+      flash[:notice] = t('txt.flash_messages.user_activated')
     end
     redirect_back_or_default('/')
   end
 
   def suspend
-    @user.suspend! 
-    flash[:notice] = "User was suspended."
+    @user.suspend!
+    flash[:notice] = t('txt.flash_messages.user_suspended')
     redirect_to users_path
   end
 
   def unsuspend
-    @user.unsuspend! 
-    flash[:notice] = "User was unsuspended."
+    @user.unsuspend!
+    flash[:notice] = t('txt.flash_messages.user_unsuspended')
     redirect_to users_path
   end
 
