@@ -564,7 +564,8 @@ table.nopad td
 table
 {
 	border-collapse:collapse;
-	font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
+	/*font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;*/
+	margin:0;
 }
 table.wide {	width:100%; }
 table tr th
@@ -879,9 +880,9 @@ img.green { background-color:#0c0;}
 
 div.editbox
 {
-	background:url(/images/reply_background.png);
-	border:2px solid #333;
-	border-width:2px 0;
+	background:#DDE0AF; /*url(/images/reply_background.png);*/
+	border:1px solid #919499;
+	border-width:1px 0;
 	position:fixed;
 	bottom:0;
 	left:0;
@@ -908,7 +909,7 @@ div.editbox textarea
 }
 div.editbox .button_or a
 {
-  color:#ccc;
+  color:#CC0033;
 }
 div.editbox table td { border:0; }
 div.editbox a.utility
@@ -939,10 +940,10 @@ div.editbox ul.help
 {
   padding:3px 10px;
   font-size:0.75em;
-  color:#ccc;
-  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
+  /*font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;*/
 }
 div.editbox ul.help { margin:0; }
+div.editbox ul.help li { margin:0; }
 
 div.editbox ul.help {
   list-style-type:none; }

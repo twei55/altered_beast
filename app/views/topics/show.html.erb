@@ -148,12 +148,12 @@
 <div class="container">
   <%= content_tag 'p', h(flash[:bad_reply]), :class => 'notice' if flash[:bad_reply] %>
   <% form_for :post, :url => forum_topic_posts_path(@forum, @topic, :page => @topic.last_page) do |f| -%>
-  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="vertical-align:top;">
     <tr>
       <td rowspan="2" width="70%">
         <%= f.text_area :body, :rows => 8 %>
       </td>
-      <td valign="top">
+      <td valign="top"  style="vertical-align:top;">
         <%= render :partial => "posts/formatting" %>
       </td>
     </tr>

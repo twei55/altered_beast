@@ -3,8 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title><%=h @current_site && current_site.name || I18n.t('txt.beast_title', :default => 'Gute Arbeit für Alleinerziehende') %><%= " - #{h @page_title}" if @page_title %></title>
-  <%= stylesheet_link_tag 'display' %>
-  <%= stylesheet_link_tag 'captcha' %>
+	<%# GAFA Styles %>
+	<%= stylesheet_link_tag 'display' %>
+	<%= stylesheet_link_tag 'captcha' %>
+	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/960' -%>
+	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/reset' -%>
+	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/text' -%>	
+	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/gafa/main' -%>
   <%= javascript_include_tag "prototype", "effects", "lowpro", "dragdrop", "controls", "application", :cache => "beast" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
@@ -12,12 +17,6 @@
   <% end -%>
 <% end -%>
   <link rel="search" type="application/opensearchdescription+xml" href="http://<%= request.host_with_port %>/open_search.xml" />
-
-	<%# GAFA Styles %>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/960' -%>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/reset' -%>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/text' -%>	
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/gafa/main' -%>
 </head>
 <body>
 
