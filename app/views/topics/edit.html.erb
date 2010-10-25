@@ -1,6 +1,6 @@
 <h1><%= I18n.t 'txt.views_topics.edit', :default => 'Edit Topic' %></h1>
 
-<%= error_messages_for @topic %>
+<%#= error_messages_for @topic %>
 <% if @topic && @topic.errors.size > 0 -%>
 	<div class="error-feedback">
 		<%= I18n.t('txt.feedback_on_errors') %>
