@@ -1,8 +1,14 @@
-Your account has been created.
+Hallo,
 
-  Username: <%= @user.login %>
-  Password: <%= @user.password %>
+Vielen Dank, dass Sie sich in unserem Forum registriert haben. 
 
-Visit this url to activate your account:
+Ihr Benutzerkonto wurde erfolgreich erstellt. Ihre Zugangsdaten lauten:
 
-  <%= @url %>
+Ihr Login: <%= @user.login %>
+Ihr Aktivierungscode: <%= @user.activation_code%>
+
+Bitte klicken Sie auf folgenden Link, um die Registrierung abzuschließen:
+<%= @url %>
+
+Mit freundlichen Grüßen,
+Ihr Gafa Team
