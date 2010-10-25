@@ -72,3 +72,21 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = :de
 
 end
+
+#
+# Fix annoying <div class="fieldsWithError"> wrapping after validation
+# http://dev.rubyonrails.org/ticket/3587
+#
+ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| 
+  msg = instance.error_message 
+  
+  if html_tag =~ /<(label|input|textarea|select)[>]+class=/
+    class_attribute = html_tag =~ /class=['"]/ 
+    html_tag.insert(class_attribute + 7, "error ") 
+  elsif html_tag =~ /<(label|input|textarea|select)/
+    first_whitespace = html_tag =~ /\s/ 
+    html_tag[first_whitespace] = " class='error' "
+  end 
+  
+  html_tag
+}

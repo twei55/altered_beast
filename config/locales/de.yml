@@ -336,3 +336,4 @@
     invalid_openid: "OpenID-Daten ungültig."
     successful_login: "Du hast Dich erfolgreich angemeldet."
     or_login_with_openid: "Log-in mit OpenID"
+    feedback_on_errors: "Bitte korrigieren Sie die markierten Felder."

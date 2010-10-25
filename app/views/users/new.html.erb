@@ -1,4 +1,9 @@
-<%= error_messages_for :user %>
+<%= error_messages_for @user%>
+<% if @user && @user.errors.size > 0 -%>
+	<div class="error-feedback">
+		<%= I18n.t('txt.feedback_on_errors') %>
+	</div>
+<% end -%>
 <% form_for :user, :url => users_path do |f| -%>
 <p><label for="login"><%= I18n.t 'txt.login_name', :default => 'Login' %></label><br/>
 <%= f.text_field :login %></p>

@@ -69,6 +69,9 @@ a { color: #24b; }
 
 
 #content form {margin-bottom:0;}
+#gafa-content form .error {background-color:#FFC720;}
+#gafa-content form label.error {font-weight:bold;}
+#gafa-content div.error-feedback {color:#CC0033;margin-bottom:20px;}
 
 #content p.subtle { 
 	margin:0 0 0.5em; 
