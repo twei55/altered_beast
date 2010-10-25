@@ -277,6 +277,7 @@
       email_directions: "Gib bitte Deine Emailadresse an, damit wir Dir neue Login-Daten schicken können. Klicke auf den Link in der Email, um Dich einzuloggen und ändere anschließend das Passwort."
       reset_password: "Passwort zurücksetzen"
       send_email: "Neues Login anfordern"
+      login_with_openid: Mit OpenID einloggen
       
 
     views_forums:
@@ -336,4 +337,5 @@
     invalid_openid: "OpenID-Daten ungültig."
     successful_login: "Du hast Dich erfolgreich angemeldet."
     or_login_with_openid: "Log-in mit OpenID"
+    or_login_with: "oder einloggen mit"
     feedback_on_errors: "Bitte korrigieren Sie die markierten Felder."

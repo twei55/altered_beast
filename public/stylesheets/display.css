@@ -73,6 +73,11 @@ a { color: #24b; }
 #gafa-content form label.error {font-weight:bold;}
 #gafa-content div.error-feedback {color:#CC0033;margin-bottom:20px;}
 
+#password_fields a, #openid_fields a {
+	color:#CC0033;
+	margin-left:5px;
+}
+
 #content p.subtle { 
 	margin:0 0 0.5em; 
 	float:right;
@@ -92,7 +97,7 @@ a { color: #24b; }
 }
 
 #search_box {
-  font-size:0.85em;
+  font-size:1.1em;
 }
 
 img { border-width:0; }
@@ -486,7 +491,7 @@ p
 
 #header ul#nav li.login a {
 	color:#CC0000;
-	padding-left:15px;
+	margin-left:15px;
 /*	text-decoration: none;*/
 }
 
