@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title><%=h @current_site && current_site.name || I18n.t('txt.beast_title', :default => 'Altered Beast') %><%= " - #{h @page_title}" if @page_title %></title>
+  <title><%=h @current_site && current_site.name || I18n.t('txt.beast_title', :default => 'Gute Arbeit für Alleinerziehende') %><%= " - #{h @page_title}" if @page_title %></title>
   <%= stylesheet_link_tag 'display' %>
   <%= stylesheet_link_tag 'captcha' %>
-  <%= javascript_include_tag "prototype", "effects", "lowpro", "time", "application", :cache => "beast" %>
+  <%= javascript_include_tag "prototype", "effects", "lowpro", "dragdrop", "controls", "application", :cache => "beast" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
   <%= auto_discovery_link_tag :atom, feed[:url], :title => "Subscribe to '#{feed[:title]}'" %>
