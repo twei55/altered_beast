@@ -1,4 +1,5 @@
 class ForumsController < ApplicationController
+  # before_filter :login_required, :only => [:index, :show]
   before_filter :admin_required, :except => [:index, :show]
 
   # GET /forums

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge, :edit]
   before_filter :find_user, :only => [:update, :show, :edit, :suspend, :unsuspend, :destroy, :purge]
-  before_filter :login_required, :only => [:settings, :update]
 
   # Brainbuster Captcha
   # before_filter :create_brain_buster, :only => [:new]
@@ -110,7 +109,7 @@ protected
   end
 
   def authorized?
-    admin? || params[:id].blank? || params[:id] == current_user.id.to_s
+    current_user ? admin? || params[:id] == current_user.id.to_s : false
   end
 
   def render_or_redirect_for_captcha_failure
