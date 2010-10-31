@@ -69,7 +69,7 @@
         unit: '€'
         format: '%n%u'
         
-  active_record:
+  activerecord:
     error:
       header_message: ["Konnte das {{object_name}} Objekt nicht speichern: 1 Fehler.", "Konnte das {{object_name}} Objekt nicht speichern: {{count}} Fehler."]
       message: "Bitte überprüfen Sie die folgenden Felder:"
@@ -93,7 +93,25 @@
       less_than_or_equal_to: "muss kleiner oder gleich {{count}} sein"
       odd: "muss ungerade sein"
       even: "muss gerade sein"
-
+    errors:
+      models:
+        user:
+          attributes:
+            login:
+              blank: "Der Benutzername ist leer"
+              too_short: "Der Benutzername ist zu kurz"
+              taken: "Der Benutzername ist bereits vergeben"
+            email:
+              blank: "Die E-Mail-Adresse ist leer"
+              too_short: "Die E-Mail-Adresse ist zu kurz"
+              taken: "Die E-Mail-Adresse ist bereits vergeben"
+              invalid: "Die E-Mail-Adresse ist ungültig"
+            password:
+              blank: "Das Passwortfeld ist leer"
+              too_short: "Das Passwort ist zu kurz"
+              confirmation: "Die Passwörter stimmen nicht überein"
+            password_confirmation:
+              blank: "Die Passwortbestätigung ist leer"
   txt:
     view: anzeigen
     create: hinzufügen
@@ -332,10 +350,11 @@
     create_account: " Bitte erstelle Dir einen Benutzeraccount."
     moderatorship_created: "Die Moderation wurde erfolgreich angelegt."
     moderatorship_not_created: "Die Moderation konnte nicht angelegt werden: "
-    logged_out: "Du hast Dich erfolgreich abgemeldet."
-    invalid_login: "Deine Login-Daten sind ungültig."
+    logged_out: "Sie haben sich erfolgreich abgemeldet."
+    invalid_login: "Ihre Login-Daten sind ungültig."
     invalid_openid: "OpenID-Daten ungültig."
-    successful_login: "Du hast Dich erfolgreich angemeldet."
+    successful_login: "Sie haben sich erfolgreich angemeldet."
     or_login_with_openid: "Log-in mit OpenID"
     or_login_with: "oder einloggen mit"
     feedback_on_errors: "Bitte korrigieren Sie die markierten Felder."
+    activation_required: "Vielen Dank für die Registrierung. Wir haben Ihnen eine Email zur Aktivierung ihres Benutzerkontos geschickt."

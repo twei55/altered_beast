@@ -64,5 +64,18 @@ module ApplicationHelper
   def for_moderators_of(record, &block)
     moderator_of?(record) && concat(capture(&block))
   end
+  
+  def show_error_message(object,field)
+    html = "<div class='errormessage'>"
+    if object && object.errors && object.errors.on(field)
+      if object.errors.on(field).class == Array
+        html += object.errors.on(field).uniq.join("<br />")
+      else
+        html += object.errors.on(field)
+      end
+    end
+    
+    return html += "</div>"
+  end
 
 end

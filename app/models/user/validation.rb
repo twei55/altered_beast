@@ -14,7 +14,7 @@ class User
   validates_uniqueness_of   :login, :email, :scope => :site_id
   before_save :encrypt_password
   before_create :set_first_user_as_admin
-  # validates_email_format_of :email, :message=>"is invalid"  
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
   validates_uniqueness_of :openid_url, :case_sensitive => false, :allow_nil => true
 
   # prevents a user from submitting a crafted form that bypasses activation
