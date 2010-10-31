@@ -151,7 +151,7 @@
     page_nr: "Seite {{nr}}"
 
     login: Login
-    login_name: Login
+    login_name: Benutzername
     password: Passwort
     password_confirm: Passwort bestätigen
     remember_me: Login merken
@@ -274,9 +274,9 @@
       without_http: "ohne HTTP:// Prefix"
       bio_title: "Über mich (öffentlich)"
       
-      email_directions: "Gib bitte Deine Emailadresse an, damit wir Dir neue Login-Daten schicken können. Klicke auf den Link in der Email, um Dich einzuloggen und ändere anschließend das Passwort."
-      reset_password: "Passwort zurücksetzen"
-      send_email: "Neues Login anfordern"
+      email_directions: "Geben Sie bitte Login und Emailadresse an, damit wir Ihnen ein neues Passwort schicken können. Klicken Sie bitte auf den Link in der Email, um sich einzuloggen. Anschließend sollten sie das Passwort ändern."
+      reset_password: "Passwort vergessen?"
+      send_email: "Neues Passwort anfordern"
       login_with_openid: Mit OpenID einloggen
       
 

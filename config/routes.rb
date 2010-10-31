@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
     :requirements => { :method => :get }
 
   map.resources :sites, :moderatorships, :monitorship
+  map.resources :downloads, :only => [:index]
   
   map.resources :forums, :has_many => :posts do |forum|
     forum.resources :topics do |topic|
@@ -14,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :posts, :collection => {:search => :get}
+  map.resources :passwords, :only => [:create]
   map.resources :users, :member => { :suspend   => :put,
                                      :settings  => :get,
                                      :make_admin => :put,

@@ -11,6 +11,13 @@ class UserMailer < ActionMailer::Base
     @body[:url]  = root_url(:host => user.site.host)
   end
   
+  def new_password(user,new_password)
+    setup_email(user)
+    @subject    += ' Ihr neues Passwort!'
+    @body[:new_password] = new_password
+    @body[:url]  = login_url(:host => user.site.host)
+  end
+  
   protected
     def setup_email(user)
       @recipients  = "#{user.email}"
