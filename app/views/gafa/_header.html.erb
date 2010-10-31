@@ -2,14 +2,23 @@
 <div id="header-overflow">
 	<div id="gafa-header" class="container_16">
 		<div class="grid_16">
-    	<img src="http://radiant.vserver18.pi.railshoster.de/images/gafa/logos/logo_bmas.gif" id="logo-bmas" />
-			<img src="http://radiant.vserver18.pi.railshoster.de/images/gafa/logos/logo_pfa.gif" id="logo-pfa" />
+    	<img src="http://www.gute-arbeit-alleinerziehende.de/images/gafa/logos/logo_bmas.gif" id="logo-bmas" />
+			<img src="http://www.gute-arbeit-alleinerziehende.de/images/gafa/logos/logo_pfa.gif" id="logo-pfa" />
 		</div>
 		<div class="clear"></div> 
 		<div id="nav-top" class="grid_16">
-			<img src="http://radiant.vserver18.pi.railshoster.de/images/gafa/logos/logo_gafa.gif" id="logo-gafa" />
-			<div id="tab01"><a href="/" class="selected">Forum</a></div>
-			<div id="tab02"><a href="http://radiant.vserver18.pi.railshoster.de/gafa_downloads/">Downloads</a></div>
+			<a alt="Zur Startseite" title="Zur Startseite" href="http://www.gute-arbeit-alleinerziehende.de">
+			<img src="http://www.gute-arbeit-alleinerziehende.de/images/gafa/logos/logo_gafa.gif" id="logo-gafa" /></a>
+			<% if selected.eql?("downloads") -%>
+				<div id="tab01"><a href="http://forum.gute-arbeit-alleinerziehende.de">Forum</a></div>
+				<div id="tab02"><a href="#" class="selected">Downloads</a></div>
+			<% elsif selected.eql?("forum") && !params[:controller].eql?("sessions") -%>
+				<div id="tab01"><a href="#" class="selected">Forum</a></div>
+				<div id="tab02"><a href="http://forum.gute-arbeit-alleinerziehende.de/downloads/">Downloads</a></div>
+			<% else -%>
+				<div id="tab01"><a href="http://forum.gute-arbeit-alleinerziehende.de">Forum</a></div>
+				<div id="tab02"><a href="http://forum.gute-arbeit-alleinerziehende.de/downloads/">Downloads</a></div>
+			<% end -%>
 		</div>
 	</div>
 	<div class="sep">&#160;</div>

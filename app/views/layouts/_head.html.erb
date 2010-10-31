@@ -1,15 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title><%=h @current_site && current_site.name || I18n.t('txt.beast_title', :default => 'Gute Arbeit für Alleinerziehende') %><%= " - #{h @page_title}" if @page_title %></title>
 	<%# GAFA Styles %>
 	<%= stylesheet_link_tag 'display' %>
 	<%= stylesheet_link_tag 'captcha' %>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/960' -%>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/reset' -%>
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/960/text' -%>	
-	<%= stylesheet_link_tag 'http://radiant.vserver18.pi.railshoster.de/stylesheets/gafa/main' -%>
+	<%= stylesheet_link_tag 'http://www.gute-arbeit-alleinerziehende.de/stylesheets/960/960' -%>
+	<%= stylesheet_link_tag 'http://www.gute-arbeit-alleinerziehende.de/stylesheets/960/reset' -%>
+	<%= stylesheet_link_tag 'http://www.gute-arbeit-alleinerziehende.de/stylesheets/960/text' -%>	
+	<%= stylesheet_link_tag 'http://www.gute-arbeit-alleinerziehende.de/stylesheets/gafa/main' -%>
   <%= javascript_include_tag "prototype", "effects", "lowpro", "dragdrop", "controls", "application", :cache => "beast" %>
 <% unless @feed_icons.blank? -%>
   <% @feed_icons.each do |feed| -%>
