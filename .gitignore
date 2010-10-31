@@ -6,6 +6,7 @@ log
 Capfile
 config/deploy.rb
 vendor/rails
+public/assets/*
 db/*.sqlite
 db/*.sqlite2
 db/*.sqlite3
