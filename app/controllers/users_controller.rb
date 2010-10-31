@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge, :edit]
   before_filter :find_user, :only => [:update, :show, :edit, :suspend, :unsuspend, :destroy, :purge]
-
+  
+  skip_before_filter :login_required, :only => [:new,:create]
+  
   # Brainbuster Captcha
   # before_filter :create_brain_buster, :only => [:new]
   # before_filter :validate_brain_buster, :only => [:create]
@@ -21,7 +23,7 @@ class UsersController < ApplicationController
 
   def create
     cookies.delete :auth_token
-    @user = current_site.users.build(params[:user])    
+    @user = current_site.users.build(params[:user])
     @user.save if @user.valid?
     @user.register! if @user.valid?
     unless @user.new_record?
@@ -109,7 +111,8 @@ protected
   end
 
   def authorized?
-    current_user ? admin? || params[:id] == current_user.id.to_s : false
+    current_user ? admin? || params[:id] == current_user.id.to_s || current_user : false
+    # current_user ? admin? || params[:id] == current_user.id.to_s : false
   end
 
   def render_or_redirect_for_captcha_failure
