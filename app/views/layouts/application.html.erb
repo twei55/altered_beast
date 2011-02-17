@@ -6,7 +6,7 @@
 <!-- Content Wrap -->
 <div id="content-overflow">
 	<div class="breadcrumbs"><a href="http://www.gute-arbeit-alleinerziehende.de">Home</a> &gt; Forum</div>
-	<div id="content-wrapper" class="container_16" style="height:1000px">
+	<div id="content-wrapper" class="container_16">
 		<div id="gafa-content" class="grid_16">
 			<div id="messages">
 				<%= content_tag 'p', h(flash[:notice]), :class => 'notice' if flash[:notice] %>
@@ -35,11 +35,5 @@
 </div>
 <div class="clear"></div>
 <div id="footer-ending"></div>
-<script type="text/javascript" charset="utf-8">
-  document.observe("dom:loaded",function(event) {
-    var main_content_margins = 45;
-    $('content-wrapper').style.height = parseInt(document.height) + "px";
-  });
-</script>
 </body>
 </html>
