@@ -17,7 +17,7 @@
 
 <p>
   <label for="user_email"><%=  I18n.t 'txt.views_users.email_title', :default => 'Email' %></label><br />
-  <%= settings.text_field :email %>
+  <%= settings.text_field :email, {:disabled => true} %>
 </p>
 
 <div>
