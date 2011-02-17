@@ -17,11 +17,10 @@
 <p><label for="password_confirmation"><%= I18n.t 'txt.password_confirm', :default => 'Confirm Password' %></label><br/>
 <%= f.password_field :password_confirmation %></p>
 <%= show_error_message(@user,:password_confirmation) %>
-<!-- <p><label for="user_openid_url"><%= I18n.t 'txt.openid_url', :default => "OpenID URL (optional)" %></label><br />
-<%= f.text_field :openid_url %>
-</p> -->
+<p><%= f.check_box :signed_newsletter, {:checked => true} %>&#160;<label for="signed_newsletter"><%= I18n.t 'txt.views_users.sign_newsletter', :default => 'I want the newsletter' %></label></p>
+<p><%= f.check_box :signed_notifications, {:checked => true} %>&#160;<label for="signed_notifications"><%= I18n.t 'txt.views_users.sign_notifications', :default => 'I want forum notifications' %></label></p>
 <%#= render :partial => 'captcha' # enable for brainbuster %>
 
-<p><%= submit_tag I18n.t('txt.sign_up', :default => 'Sign up') %></p>
+<p style="padding:15px 0"><%= submit_tag I18n.t('txt.sign_up', :default => 'Sign up') %></p>
 
 <% end -%>

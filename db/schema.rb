@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090317123901) do
+ActiveRecord::Schema.define(:version => 20110217093317) do
 
   create_table "brain_busters", :force => true do |t|
     t.string "question"
@@ -137,6 +137,8 @@ ActiveRecord::Schema.define(:version => 20090317123901) do
     t.string   "bio"
     t.string   "display_name"
     t.string   "permalink"
+    t.boolean  "signed_newsletter",                       :default => false
+    t.boolean  "signed_notifications",                    :default => false
   end
 
   add_index "users", ["last_seen_at"], :name => "index_users_on_last_seen_at"

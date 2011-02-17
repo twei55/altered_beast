@@ -30,12 +30,19 @@
 
 <% form_for :user, :url => user_path(@user), :html => { :method => :put } do |f| -%>
   <%= render :partial => "settings", :object => f %>
-  <p><%= submit_tag I18n.t('txt.views_users.change_email_or_password', :default => 'Change e-mail or password') %></p>
+  <p><%= submit_tag I18n.t('txt.views_users.change_password', :default => 'Change e-mail or password') %></p>
 <% end -%>
 
-<br />
+<hr style="margin-top:30px" />
 
 <% form_for :user, :url => user_path(@user), :html => { :method => :put } do |f| -%>
   <%= render :partial => "contact_info", :locals => { :settings => f } %>
   <%= submit_tag I18n.t('txt.views_users.update_profile', :default => 'Update profile') %> <%= I18n.t 'txt.or', :default => 'or' %> <%= link_to(I18n.t('txt.cancel', :default => 'Cancel'), user_path(@user)) %>
+<% end -%>
+
+<hr style="margin-top:30px" />
+
+<% form_for :user, :url => user_path(@user), :html => { :method => :put } do |f| -%>
+  <%= render :partial => "mail_settings", :locals => { :f => f } %>
+  <p style="padding:15px 0"><%= submit_tag I18n.t('txt.views_users.update_mail_settings', :default => 'Update mail settings') %> <%= I18n.t 'txt.or', :default => 'or' %> <%= link_to(I18n.t('txt.cancel', :default => 'Cancel'), user_path(@user)) %></p>
 <% end -%>
