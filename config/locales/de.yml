@@ -297,6 +297,11 @@
       send_email: "Neues Passwort anfordern"
       login_with_openid: Mit OpenID einloggen
       
+      mail_settings: Benachrichtigungen
+      change_password: Passwort ändern
+      update_mail_settings: Benachrichtigungen aktualisieren
+      sign_newsletter: Ja, ich möchte den Newsletter erhalten
+      sign_notifications: Ja, ich möchte Forum-Benachrichtungen erhalten
 
     views_forums:
       title: Name des Forums
