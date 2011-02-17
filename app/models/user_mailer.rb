@@ -18,6 +18,13 @@ class UserMailer < ActionMailer::Base
     @body[:url]  = login_url(:host => user.site.host)
   end
   
+  def reply_notification(user,topic)
+    setup_email(user)
+    @subject += ' Neuer Beitrag zu Ihrem Thema'
+    @body[:topic] = topic
+    @body[:topic_url] = forum_topic_path(topic.forum,topic)
+  end
+  
   protected
     def setup_email(user)
       @recipients  = "#{user.email}"
