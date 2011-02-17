@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge, :edit]
   before_filter :find_user, :only => [:update, :show, :edit, :suspend, :unsuspend, :destroy, :purge]
   
-  skip_before_filter :login_required, :only => [:new,:create]
+  skip_before_filter :login_required, :only => [:new,:create,:activate]
   
   # Brainbuster Captcha
   # before_filter :create_brain_buster, :only => [:new]
