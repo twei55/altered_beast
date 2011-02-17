@@ -137,6 +137,12 @@
       email_directions: Enter your email, and a brand new login key will be sent to you.  Click the link in the email to log in, and then change your password.
       reset_password: Reset password
       
+      mail_settings: Newsletter / Notifications
+      change_password: Change password
+      update_mail_settings: Update notifications
+      sign_newsletter: Yes, I want to receive newsletters
+      sign_notifications: Yes, I want to receive notifications
+      
     post_created: "Post was successfully created."
     post_updated: "Post was successfully updated."
     topic_created: "Topic was successfully created."
